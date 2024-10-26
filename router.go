@@ -83,3 +83,7 @@ func (router *Router) Patch(path string, handler http.HandlerFunc) *Route {
 func (router *Router) Put(path string, handler http.HandlerFunc) *Route {
 	return router.handle(path, "PUT", handler)
 }
+
+func (router *Router) Delete(path string, handler http.HandlerFunc) *Route {
+	return router.handle(path, "DELETE", handler)
+}
